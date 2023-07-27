@@ -1,0 +1,9 @@
+// ignore node_modules
+node_modules
+
+// ignore dist folder
+dist
+
+.DS_Store
+
+*.log
