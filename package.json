@@ -4,7 +4,8 @@
   "description": "A simple javascript class to make simple number input spinner",
   "main": "dist/js/nice-number.js",
   "scripts": {
-    "dev": "./node_modules/.bin/esbuild ./src/js/nice-number.js --bundle --outfile=./dist/js/nice-number.js --watch",
+    "watch:js": "./node_modules/.bin/esbuild ./src/js/nice-number.js --bundle --outfile=./dist/js/nice-number.js --watch",
+    "watch": "concurrently \"npm run watch:js\"",
     "build": "./node_modules/.bin/esbuild ./src/js/nice-number.js --bundle --outfile=./dist/js/nice-number.js --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +17,9 @@
   "author": "wahyuang",
   "license": "ISC",
   "dependencies": {
-    "esbuild": "^0.18.17"
+    "concurrently": "^8.2.0",
+    "esbuild": "^0.18.17",
+    "esbuild-sass-plugin": "^2.10.0",
+    "sass": "^1.64.1"
   }
 }
