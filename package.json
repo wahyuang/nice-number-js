@@ -20,7 +20,7 @@
   ],
   "author": "wahyuang",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^8.2.0",
     "esbuild": "^0.18.17",
     "rimraf": "^5.0.1",
