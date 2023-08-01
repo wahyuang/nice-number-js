@@ -1,6 +1,6 @@
 {
   "name": "nice-number-js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A simple javascript class to make simple number input spinner",
   "main": "dist/js/nice-number.min.js",
   "scripts": {
