@@ -2,10 +2,15 @@
   "name": "nice-number-js",
   "version": "1.0.0",
   "description": "A simple javascript class to make simple number input spinner",
-  "main": "dist/js/nice-number.js",
+  "main": "dist/js/nice-number.min.js",
   "scripts": {
-    "dev": "./node_modules/.bin/esbuild ./src/js/nice-number.js --bundle --outfile=./dist/js/nice-number.js --watch",
-    "build": "./node_modules/.bin/esbuild ./src/js/nice-number.js --bundle --outfile=./dist/js/nice-number.js --minify",
+    "prebuild": "rimraf dist",
+    "watch:js": "./node_modules/.bin/esbuild ./src/js/nice-number.js --bundle --outfile=./dist/js/nice-number.js --watch",
+    "watch:scss": "./node_modules/.bin/sass --watch ./src/scss/nice-number.scss ./dist/css/nice-number.css",
+    "watch": "concurrently \"npm run watch:js\" \"npm run watch:scss\"",
+    "build:js": "./node_modules/.bin/esbuild ./src/js/nice-number.js --outfile=./dist/js/nice-number.min.js --minify",
+    "build:scss": "./node_modules/.bin/sass --style=compressed ./src/scss/nice-number.scss ./dist/css/nice-number.min.css",
+    "build": "concurrently \"npm run build:js\" \"npm run build:scss\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,7 +20,14 @@
   ],
   "author": "wahyuang",
   "license": "ISC",
-  "dependencies": {
-    "esbuild": "^0.18.17"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wahyuang/nice-number-js.git"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "esbuild": "^0.18.17",
+    "rimraf": "^5.0.1",
+    "sass": "^1.64.1"
   }
 }

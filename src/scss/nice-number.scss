@@ -1,0 +1,27 @@
+$default-color: #ff5252;
+
+.pxcookie-spinner {
+  display: flex;
+  flex-wrap: nowrap;
+
+  input[type="number"] {
+    height: 40px;
+    border: 1px $default-color solid;
+    width: 80px;
+    padding: 4px 16px;
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: $default-color;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+  }
+}

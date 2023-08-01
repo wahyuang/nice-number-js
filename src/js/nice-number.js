@@ -12,8 +12,6 @@ class NiceNumber {
     parentElement.appendChild(div);
   }
 
-  init() {}
-
   createUI(element) {
     const wrapper = this.createWrapper();
     const buttonPlus = this.createButtonPlus();
